@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bluid/styles.css" />
+    <script src="../src/js/areas.js"></script>
+    <title>Áreas y perímetros de figuras geométricas</title>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex flex-col justify-between my-0 sm:py-12 text-xl">
+    <header class="text-center bg-blue-500 py-8">
+        <h1 class="text-4xl font-bold text-white">Áreas y perímetros de figuras geométricas</h1>
+    </header>
+
+    <section class="mx-auto max-w-7xl my-8 px-12 flex-1">
+                <div class="bg-white px-4 py-10 shadow-xl rounded-lg divide-y divide-gray-300 mt-8">
+                    <div class="mmb-8 px-4 py-8">
+                        <div class="flex items-center justify-center mb-4">
+                            <img src="https://img.icons8.com/ios/50/000000/square-spinner.png" class="mr-4" />
+                            <h2 class="text-3xl font-bold text-gray-900">Área y perímetro del cuadrado</h2>
+                        </div>
+                        <form>
+                            <div class="mb-4 mt-6 w-full max-w-lg">
+                                <label for="inputCuadrado" class="block text-xl font-medium text-gray-700 text-center">Ingresa los lados del cuadrado</label>
+                                <input type="number" id="inputCuadrado" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                            </div>
+                            <div class="flex justify-center space-x-4">
+                                <button type="button" onclick="calcularAreaCuadrado()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Área</button>
+                                <button type="button" onclick="calcularPerimetroCuadrado()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Perímetro</button>
+                            </div>
+                        </form>
+                        <table class="w-full text-left mt-4">
+                            <thead>
+                                <tr>
+                                    <th class="border-b-2 border-gray-300 px-4 py-2">Área</th>
+                                    <th class="border-b-2 border-gray-300 px-4 py-2">Perímetro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="resultArea" class="border-b border-gray-300 px-4 py-2"></td>
+                                    <td id="resultPerimeter" class="border-b border-gray-300 px-4 py-2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+            <div class="mb-8 px-4 mt-8 py-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="https://img.icons8.com/wired/64/000000/three-triangles.png" class="mr-4" />
+                    <h3 class="text-3xl font-bold text-gray-900">Área y perímetro del triángulo</h3>
+                </div>
+                <form>
+                    <div class="mb-4">
+                        <label for="inputLado1" class="block text-xl font-medium text-gray-700">Ingresa el primer lado del triángulo</label>
+                        <input type="number" id="inputLado1" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="inputLado2" class="block text-xl font-medium text-gray-700">Ingresa el segundo lado del triángulo</label>
+                        <input type="number" id="inputLado2" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="base" class="block text-xl font-medium text-gray-700">Ingresa la base del triángulo</label>
+                        <input type="number" id="base" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="altura" class="block text-xl font-medium text-gray-700">Ingresa la altura del triángulo</label>
+                        <input type="number" id="altura" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button type="button" onclick="calcularAlturaLado1()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular altura Lado 1</button>
+                        <button type="button" onclick="calcularAlturaLado2()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular altura Lado 2</button>
+                        <button type="button" onclick="calcularBase()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular altura de la base</button>
+                        <button type="button" onclick="calcularAreaTriangulo()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Área</button>
+                        <button type="button" onclick="calcularPerimetroTriangulo()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Perímetro</button>
+                    </div>
+                </form>
+                <table class="w-full text-left mt-4">
+                    <thead>
+                        <tr>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Altura Lado 1</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Altura Lado 2</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Altura Base</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Área Triángulo</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Perímetro Triángulo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="alturaLado1" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="alturaLado2" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="alturaBase" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="areaTriangulo" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="perimetroTriangulo" class="border-b border-gray-300 px-4 py-2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="mb-8 px-4">
+                <div class="flex items-center justify-center mb-4 py-8">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/loading-circle--v1.png" class="mr-4" />
+                    <h4 class="text-3xl font-bold text-gray-900">Área y perímetro del círculo</h4>
+                </div>
+                <form>
+                    <div class="mb-4">
+                        <label for="radio" class="block text-xl font-medium text-gray-700">Introduce el radio del círculo</label>
+                        <input type="number" id="radio" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <button type="button" onclick="calcularDiametro()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Diámetro</button>
+                        <button type="button" onclick="calcularCircunferencia()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Circunferencia</button>
+                        <button type="button" onclick="calcularRadio()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Radio</button>
+                    </div>
+                </form>
+                <table class="w-full text-left mt-4">
+                    <thead>
+                        <tr>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Diámetro</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Circunferencia</th>
+                            <th class="border-b-2 border-gray-300 px-4 py-2">Radio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="calculaDiametro" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="calcularCircunferencia" class="border-b border-gray-300 px-4 py-2"></td>
+                            <td id="calcularRadio" class="border-b border-gray-300 px-4 py-2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+    </section>
+    <footer class="mt-8 text-center bg-blue-500 py-8">
+        <a href="./promedio.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Promedio, Media aritmética...</a>
+        <a href="./descuentos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Porcentajes y Descuentos</a>
+        <a href="./index.html" class="text-2xl font-bold text-white hover:text-gray-300">HOME</a>
+        <a href="./calculadoraIngresos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Calculadora personalizada de Ingresos</a>
+    </footer>
+</body>
+</html>

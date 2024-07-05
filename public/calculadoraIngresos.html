@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bluid/styles.css">
+    <script src="../src/js/calculadoraIngresos.js"></script>
+    
+    <title>Calculadora de ingresos y discriminación de ingresos personalizado</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between my-0 sm:py-12 text-xl">
+    <header class="text-center bg-blue-500 py-8">
+        <h1 class="text-4xl font-bold text-white">CALCULADORA DE INGRESOS</h1>
+    </header>
+
+    <main class="mx-auto max-w-7xl my-8 px-12 flex-1">
+        <label for="ingresos" class="block text-xl font-medium text-gray-700">Digita los ingresos obtenidos en el último mes separados por una ","</label>
+        <input type="text" id="ingresos" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-white-100 text-center">
+        <div class="flex justify-center space-x-4 mt-4">
+            <button type="button" onclick="calcularIngresos()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular Ingresos</button>
+            <button type="button" onclick="discriminarIngresos()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Discriminar Ingresos</button>
+        </div>
+    </main>
+
+    <div class="mx-auto max-w-7xl mb-8 px-12">
+        <table class="w-full text-left mt-4">
+            <thead>
+                <tr>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">Total ingresos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="resultadoIngresos" class="border-b border-gray-300 px-4 py-2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="w-full text-left mt-8">
+            <thead>
+                <tr>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 1</th>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 2</th>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 3</th>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 4</th>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 5</th>
+                    <th class="border-b-2 border-gray-300 px-4 py-2">INGRESO 6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="ingresoPantallaN" class="border-b border-gray-300 px-4 py-2"></td>
+                    <td id="ingresoPantallasN" class="border-b border-gray-300 px-4 py-2"></td>
+                    <td id="ingresoPantallaDyHb" class="border-b border-gray-300 px-4 py-2"></td>
+                    <td id="ingresoCuentaN" class="border-b border-gray-300 px-4 py-2"></td>
+                    <td id="ingresoCuentaDyHb" class="border-b border-gray-300 px-4 py-2"></td>
+                    <td id="ingresoDiferente" class="border-b border-gray-300 px-4 py-2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="mt-8 text-center bg-blue-500 py-8">
+        <a href="./promedio.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Promedio, Media aritmética...</a>
+        <a href="./descuentos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Porcentajes y Descuentos</a>
+        <a href="./index.html" class="text-2xl font-bold text-white hover:text-gray-300">HOME</a>
+        <a href="./areas.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Áreas y perímetros cuadrado</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bluid/styles.css">
+    <script src="../src/js/descuentos.js"></script>
+    <title>Calculadora de descuentos personalizados y bonos</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between text-xl">
+
+    <header class="text-center bg-blue-500 py-8">
+        <h1 class="text-4xl font-bold text-white">Porcentajes y Descuentos</h1>
+        <p class="text-lg text-white">Calcula tus precios y Descuentos</p>
+    </header>
+
+    <section class="mx-auto max-w-7xl my-8 px-12">
+        <form class="h-1/2 flex flex-col justify-center mb-8">
+            <label for="precio" class="block text-xl font-medium text-gray-700 mb-2">Ingresa el valor del Producto</label>
+            <input type="number" id="precio" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-700 text-gray-800 text-center">
+            
+            <label for="descuentoCupon" class="block text-xl font-medium text-gray-700 mt-4 mb-2">Ingresa el cupón que aplica al producto</label>
+            <input type="text" id="descuentoCupon" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-700 text-gray-800 text-center">
+            <button type="button" onclick="calcularDescuentoCupon()" class="bg-blue-500 text-white px-4 py-4 rounded-lg mt-8 hover:bg-blue-600">Calcular Cupón</button>
+            
+            <label for="descuento" class="block text-xl font-medium text-gray-700 mt-4 mb-2">Ingresa el descuento que aplica al producto</label>
+            <input type="number" id="descuento" class="mt-2 mb-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-700 text-gray-800 text-center">
+            <button type="button" onclick="calcularDescuento()" class="bg-blue-500 text-white px-4 py-4 rounded-lg mt-8 hover:bg-blue-600">Calcular Descuento</button>
+        </form>
+    
+        <div class="bg-white rounded-lg shadow-xl px-8 py-6 mb-8">
+            <table class="w-full text-left">
+                <tr>
+                    <th class="border-b-2 border-gray-300 px-4 py-2 mt-2">Valor a Cobrar</th>
+                </tr>
+                <tr>
+                    <td id="result" class="border-b border-gray-300 px-4 py-2"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="mx-auto max-w-7xl mb-8 px-12">
+        <div class="bg-gray-200 rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Cupones a aplicar</h2>
+            <ul class="bg-white shadow-md rounded-lg p-4 px-8">
+                <li class="text-3xl text-gray-700 border-b border-gray-200 py-2">Navidad</li>
+                <li class="text-3xl text-gray-700 border-b border-gray-200 py-2">Pascua</li>
+                <li class="text-3xl text-gray-700 border-b border-gray-200 py-2">Cumpleaños</li>
+                <li class="text-3xl text-gray-700 border-b border-gray-200 py-2">Semana Santa</li>
+                <li class="text-3xl text-gray-700 border-b border-gray-200 py-2">Black Friday</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="mt-8 text-center bg-blue-500 py-8">
+        
+        <a href="./areas.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Áreas y perímetros cuadrado</a>
+        <a href="./promedio.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Promedio, Media aritmética...</a>
+        <a href="./index.html" class="text-2xl font-bold text-white hover:text-gray-300">HOME</a>
+        <a href="./calculadoraIngresos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Calculadora personalizada de Ingresos</a>
+    </footer>
+
+</body>
+</html>

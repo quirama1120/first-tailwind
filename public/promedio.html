@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bluid/styles.css">
+    <script src="../src/js/promedio.js"></script>
+    <title>calculadora de promedio, media, mediana, media aritmética y moda</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between my-0 sm:py-12 text-xl">
+    <header class="text-center bg-blue-500 py-8">
+        <h1 class="text-4xl font-bold text-white">PROMEDIO, MEDIA, <br> MEDIA ARITMÉTICA Y MODA</h1>
+    </header>
+
+    <section class="mx-auto max-w-7xl my-8 px-12 flex-1">
+        <section class="bg-white px-4 py-10 shadow-xl rounded-lg divide-y divide-gray-300 mt-8">
+            <div class="mmb-8 px-4 py-8">
+                <h2 class="text-3xl font-bold text-gray-900">PROMEDIO</h2>
+                <p>Calcula el promedio de los datos que ingreses a continuación</p>
+
+                <form>
+                    <label for="valoresPromedio" class="block text-xl font-medium text-gray-700">Ingresa los valores numéricos separados por ","</label>
+                    <input type="text" id="valoresPromedio" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    <div class="flex justify-center mt-4">
+                        <button type="button" onclick="promedioArray()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular</button>
+                    </div>
+                </form>
+
+                <table class="w-full text-left mt-4">
+                    <tr>
+                        <th class="border-b-2 border-gray-300 px-4 py-2">EL PROMEDIO ES</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoPromedio" class="border-b border-gray-300 px-4 py-2"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-white px-4 py-10 shadow-xl rounded-lg divide-y divide-gray-300 mt-8">
+            <div class="mmb-8 px-4 py-8">
+                <h3 class="text-3xl font-bold text-gray-900">MEDIA</h3>
+                <p>Calcula la media de los datos que ingreses a continuación</p>
+
+                <form>
+                    <label for="valoresMedia" class="block text-xl font-medium text-gray-700">Ingresa los valores numéricos separados por ","</label>
+                    <input type="text" id="valoresMedia" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    <div class="flex justify-center mt-4">
+                        <button type="button" onclick="medianaArray()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular</button>
+                    </div>
+                </form>
+
+                <table class="w-full text-left mt-4">
+                    <tr>
+                        <th class="border-b-2 border-gray-300 px-4 py-2">LA MEDIANA ES</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoMediana" class="border-b border-gray-300 px-4 py-2"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-white px-4 py-10 shadow-xl rounded-lg divide-y divide-gray-300 mt-8">
+            <div class="mmb-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-gray-900">MODA</h4>
+                <p>Calcula la moda de los datos que ingreses a continuación</p>
+
+                <form>
+                    <label for="valoresModa" class="block text-xl font-medium text-gray-700">Ingresa los valores numéricos separados por ","</label>
+                    <input type="text" id="valoresModa" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    <div class="flex justify-center mt-4">
+                        <button type="button" onclick="calcularModa()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular</button>
+                    </div>
+                </form>
+
+                <table class="w-full text-left mt-4">
+                    <tr>
+                        <th class="border-b-2 border-gray-300 px-4 py-2">LA MODA ES</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoModa" class="border-b border-gray-300 px-4 py-2"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-white px-4 py-10 shadow-xl rounded-lg divide-y divide-gray-300 mt-8">
+            <div class="mmb-8 px-4 py-8">
+                <h4 class="text-3xl font-bold text-gray-900">MEDIA GEOMÉTRICA</h4>
+                <p>Calcula la media geométrica de los datos que ingreses a continuación</p>
+
+                <form>
+                    <label for="valoresMediaGeometrica" class="block text-xl font-medium text-gray-700">Ingresa los valores numéricos separados por ","</label>
+                    <input type="text" id="valoresMediaGeometrica" class="mt-2 p-2 border border-gray-300 rounded-lg w-full bg-gray-100 text-center" />
+                    <div class="flex justify-center mt-4">
+                        <button type="button" onclick="calcularMediaGeometrica()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Calcular</button>
+                    </div>
+                </form>
+
+                <table class="w-full text-left mt-4">
+                    <tr>
+                        <th class="border-b-2 border-gray-300 px-4 py-2">LA MEDIA GEOMÉTRICA ES</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoMediaGeometrica" class="border-b border-gray-300 px-4 py-2"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <footer class="mt-8 text-center bg-blue-500 py-8">
+        <a href="./areas.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Áreas y perímetros cuadrado</a>
+        <a href="./descuentos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Porcentajes y Descuentos</a>
+        <a href="./index.html" class="text-2xl font-bold text-white hover:text-gray-300">HOME</a>
+        <a href="./calculadoraIngresos.html" class="py-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition duration-300 ease-in-out">Calculadora personalizada de Ingresos</a>
+    </footer>
+</body>
+
+</html>
